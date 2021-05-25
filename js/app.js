@@ -64,8 +64,9 @@ document.addEventListener("DOMContentLoaded", () => {
     //generate new apple once apple is eaten
     function randomApple() {
         do{
-            appleIndex = Math.floor(Math.random() * squares.length);                    
-        } while(squares[appleIndex].classList.contains('snake')) //making sure apples won't apper on snake
+            appleIndex = Math.floor(Math.random() * squares.length);
+            console.log(appleIndex);                    
+        } while(squares[appleIndex].classList.contains('snake')) //making sure apples won't appear on snake
         squares[appleIndex].classList.add('apple');
     }
     
