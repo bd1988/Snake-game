@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const startBtn = document.querySelector('.start');
     const width = 10;
     let currentIndex = 0; //first div in our grid
-    let appleIndex = 0; //first div in our grid
+    let appleIndex = 50;
     let currentSnake = [2,1,0] // the div in our grid being 2 (or the HEAD), and 0 being the end (TAIL)
     let direction = 1;
     let score = 0;
@@ -64,8 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //generate new apple once apple is eaten
     function randomApple() {
         do{
-            appleIndex = Math.floor(Math.random() * squares.length);
-            console.log(appleIndex);
+            appleIndex = Math.floor(Math.random() * squares.length);                    
         } while(squares[appleIndex].classList.contains('snake')) //making sure apples won't apper on snake
         squares[appleIndex].classList.add('apple');
     }
